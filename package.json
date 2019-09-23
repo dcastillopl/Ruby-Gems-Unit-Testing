@@ -1,0 +1,58 @@
+{
+  "name": "ruby-gems-unit-testing",
+  "version": "0.0.0",
+  "description": "ruby-gems-unit-testing",
+  "main": "server.js",
+  "scripts": {
+    "build": "./node_modules/.bin/parcel build ./public/index.html",
+    "dev": "concurrently './node_modules/.bin/parcel ./public/index.html' 'node ./server'",
+    "start": "NODE_ENV=production node ./server",
+    "test": "jest --watch",
+    "start-react-windows": "./node_modules/.bin/parcel ./public/index.html",
+    "start-server-windows": "node ./server",
+    "dev-windows": "concurrently npm:start-react-windows npm:start-server-windows"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcastillopl/Ruby-Gems-Unit-Testing.git"
+  },
+  "author": "dcastillopl",
+  "license": "unlicensed",
+  "bugs": {
+    "url": "https://github.com/dcastillopl/Ruby-Gems-Unit-Testing/issues"
+  },
+  "homepage": "https://github.com/dcastillopl/Ruby-Gems-Unit-Testing#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.16.3",
+    "history": "^4.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "concurrently": "^4.0.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.8.0",
+    "parcel": "^1.9.7",
+    "redux-mock-store": "^1.5.3"
+  },
+  "proxy": "http://localhost:3000",
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./jestConfig.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
+    }
+  }
+}
