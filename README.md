@@ -1,10 +1,10 @@
-#Ruby Gems Unit Testing
+# Ruby Gems Unit Testing
 
-##Install
+## Install
 `npm i`
 
-##Run Application
+## Run Application
 `npm run dev`
 
-##Run All Tests
+## Run All Tests
 `npm run test`
